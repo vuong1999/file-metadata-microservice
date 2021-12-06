@@ -18,7 +18,7 @@ app.post('/api/fileanalyse', upload.single('upfile'), (req, res, next) => {
   // req.body will hold the text fields, if there were any
   // console.log(req.file);
   // console.log(req.body);
-  res.send({
+  res.json({
     name: req.file.fieldname,
     type: req.file.mimetype,
     size: req.file.size,
